@@ -1,0 +1,242 @@
+[
+  {
+    "decision_id": "74a63ff2",
+    "timestamp": "2026-04-25T13:25:05.668857+00:00",
+    "platform": "Instagram",
+    "format": "carousel",
+    "topic_keywords": [
+      "weekly",
+      "deals"
+    ],
+    "goal_type": "conversion",
+    "audience_segment": "",
+    "business_type": "",
+    "predicted": {
+      "reach": 5000,
+      "engagement": 5.0,
+      "conversion": 3.0
+    },
+    "actual": {
+      "reach": 5853,
+      "engagement": 4.5,
+      "conversion": 2.4
+    },
+    "outcome_score": 0.0,
+    "performance_ratio": 0.957
+  },
+  {
+    "decision_id": "617e2509",
+    "timestamp": "2026-04-25T13:25:05.679526+00:00",
+    "platform": "Instagram",
+    "format": "carousel",
+    "topic_keywords": [
+      "weekly",
+      "deals"
+    ],
+    "goal_type": "conversion",
+    "audience_segment": "",
+    "business_type": "",
+    "predicted": {
+      "reach": 5000,
+      "engagement": 5.0,
+      "conversion": 3.0
+    },
+    "actual": {
+      "reach": 6000,
+      "engagement": 5.5,
+      "conversion": 3.5
+    },
+    "outcome_score": 0.0,
+    "performance_ratio": 1.156
+  },
+  {
+    "decision_id": "d4b40674",
+    "timestamp": "2026-04-25T13:27:59.775616+00:00",
+    "platform": "Instagram",
+    "format": "carousel",
+    "topic_keywords": [
+      "weekly",
+      "deals"
+    ],
+    "goal_type": "conversion",
+    "audience_segment": "",
+    "business_type": "",
+    "predicted": {
+      "reach": 5000,
+      "engagement": 5.0,
+      "conversion": 3.0
+    },
+    "actual": {
+      "reach": 4211,
+      "engagement": 3.1,
+      "conversion": 3.0
+    },
+    "outcome_score": 0.0,
+    "performance_ratio": 0.821
+  },
+  {
+    "decision_id": "f69c5c4d",
+    "timestamp": "2026-04-25T13:27:59.778180+00:00",
+    "platform": "Instagram",
+    "format": "carousel",
+    "topic_keywords": [
+      "weekly",
+      "deals"
+    ],
+    "goal_type": "conversion",
+    "audience_segment": "",
+    "business_type": "",
+    "predicted": {
+      "reach": 5000,
+      "engagement": 5.0,
+      "conversion": 3.0
+    },
+    "actual": {
+      "reach": 6000,
+      "engagement": 5.5,
+      "conversion": 3.5
+    },
+    "outcome_score": 0.0,
+    "performance_ratio": 1.156
+  },
+  {
+    "decision_id": "b5a0fb5c",
+    "timestamp": "2026-04-25T13:28:41.494857+00:00",
+    "platform": "Instagram",
+    "format": "carousel",
+    "topic_keywords": [
+      "family",
+      "meal",
+      "planning",
+      "recipes",
+      "affordable"
+    ],
+    "goal_type": "conversion",
+    "audience_segment": "budget-conscious family shoppers aged 28\u201345",
+    "business_type": "local retail",
+    "predicted": {
+      "reach": 9530,
+      "engagement": 6.8,
+      "conversion": 3.8
+    },
+    "actual": {
+      "reach": 10180,
+      "engagement": 7.5,
+      "conversion": 4.1
+    },
+    "outcome_score": 7.75,
+    "performance_ratio": 1.083
+  },
+  {
+    "decision_id": "b48e7d6c",
+    "timestamp": "2026-04-25T13:35:32.818131+00:00",
+    "platform": "X",
+    "format": "static image",
+    "topic_keywords": [
+      "interviews",
+      "tech",
+      "influencers",
+      "potential",
+      "genai"
+    ],
+    "goal_type": "awareness",
+    "audience_segment": "tech-savvy business decision makers, college students in STEM fields, and social media influencers in the tech niche",
+    "business_type": "B2B SaaS",
+    "predicted": {
+      "reach": 4742,
+      "engagement": 3.0,
+      "conversion": 2.0
+    },
+    "actual": {
+      "reach": 4588,
+      "engagement": 3.7,
+      "conversion": 1.3
+    },
+    "outcome_score": 7.81,
+    "performance_ratio": 0.95
+  },
+  {
+    "decision_id": "14934356",
+    "timestamp": "2026-04-25T13:36:41.767853+00:00",
+    "platform": "Instagram",
+    "format": "carousel",
+    "topic_keywords": [
+      "family",
+      "meal",
+      "planning",
+      "recipes",
+      "shopping"
+    ],
+    "goal_type": "conversion",
+    "audience_segment": "budget-conscious family shoppers aged 28\u201345",
+    "business_type": "local retail",
+    "predicted": {
+      "reach": 9530,
+      "engagement": 6.8,
+      "conversion": 3.8
+    },
+    "actual": {
+      "reach": 7340,
+      "engagement": 7.6,
+      "conversion": 2.7
+    },
+    "outcome_score": 7.93,
+    "performance_ratio": 0.866
+  },
+  {
+    "decision_id": "a0935718",
+    "timestamp": "2026-04-25T13:40:47.917274+00:00",
+    "platform": "LinkedIn",
+    "format": "long-form text",
+    "topic_keywords": [
+      "'the",
+      "future",
+      "fintech:",
+      "how",
+      "our"
+    ],
+    "goal_type": "lead-generation",
+    "audience_segment": "startup founders and technical CTOs of small businesses",
+    "business_type": "B2B SaaS",
+    "predicted": {
+      "reach": 6976,
+      "engagement": 5.2,
+      "conversion": 5.2
+    },
+    "actual": {
+      "reach": 7980,
+      "engagement": 3.6,
+      "conversion": 4.1
+    },
+    "outcome_score": 8.38,
+    "performance_ratio": 0.875
+  },
+  {
+    "decision_id": "92830297",
+    "timestamp": "2026-05-01T16:03:09.620646+00:00",
+    "platform": "LinkedIn",
+    "format": "carousel",
+    "topic_keywords": [
+      "success",
+      "stories",
+      "similar",
+      "startups",
+      "have"
+    ],
+    "goal_type": "lead-generation",
+    "audience_segment": "tech-savvy startup founders and CTOs at small to medium-sized businesses",
+    "business_type": "B2B SaaS",
+    "predicted": {
+      "reach": 6684,
+      "engagement": 5.1,
+      "conversion": 5.1
+    },
+    "actual": {
+      "reach": 6901,
+      "engagement": 4.8,
+      "conversion": 3.9
+    },
+    "outcome_score": 8.03,
+    "performance_ratio": 0.913
+  }
+]

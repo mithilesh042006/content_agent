@@ -1,0 +1,26 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(pip install *)",
+      "Bash(pytest tests/ -v)",
+      "Bash(python -c \"from app.main import app; from app.dependencies import get_llm; from app.config import settings; print\\('model:', settings.model_name\\); print\\('llm \\(no key\\):', get_llm\\(\\)\\)\")",
+      "Bash(python test_live.py)",
+      "Bash(python -c ' *)",
+      "Bash(echo \"EXIT=$?\")",
+      "Bash(npm install *)",
+      "Bash(uvicorn app.main:app --port 8000)",
+      "Bash(npm run *)",
+      "Bash(curl -s http://localhost:5173/)",
+      "Bash(curl -s -o /tmp/app.js -w \"%{http_code}\\\\n\" http://localhost:5173/src/App.jsx)",
+      "Read(//tmp/**)",
+      "Bash(curl -s -w \"\\\\nHTTP %{http_code}\\\\n\" -X POST http://localhost:8000/agent/pipeline -H \"Content-Type: application/json\" -H \"Origin: http://localhost:5173\" -d '{\"business_domain\":\"SaaS fintech\",\"content_goal\":\"Drive API signups\",\"target_audience\":\"startup CTOs\",\"tone\":\"authoritative\"}')",
+      "Bash(python -c \"import sys,json; data=sys.stdin.read\\(\\); print\\(data[-80:]\\)\")",
+      "Bash(curl -s -X POST http://localhost:8000/agent/pipeline -H \"Content-Type: application/json\" -d '{\"business_domain\":\"grocery shop\",\"content_goal\":\"increase sales and customers\",\"target_audience\":\"budget-conscious home cooks\",\"tone\":\"casual\"}')",
+      "Bash(pip show *)",
+      "Bash(netstat -ano)",
+      "Bash(awk '{print $NF}')",
+      "Bash(curl -s -o /tmp-out.js -w \"%{http_code}\" http://localhost:5173/src/App.jsx)",
+      "Bash(taskkill //F //PID 12436)"
+    ]
+  }
+}

@@ -1,0 +1,206 @@
+@import "tailwindcss";
+
+/* ── Theme tokens (light = Day Edition) ──────────────────────────────── */
+:root {
+  --paper:      #EEE7D5;
+  --paper-2:    #E4DCC3;
+  --paper-3:    #D8CDAE;
+  --ink:        #1A1410;
+  --ink-2:      #2D2620;
+  --ink-soft:   #4A3F35;
+  --ink-muted:  #857765;
+  --amber:      #C65E2D;
+  --amber-deep: #8E3E17;
+  --blue:       #1F3B5A;
+  --sage:       #5F7A50;
+  --rust:       #8B2500;
+
+  --fiber-strong: rgba(26, 20, 16, 0.018);
+  --fiber-weak:   rgba(26, 20, 16, 0.008);
+
+  --grain-blend:   multiply;
+  --grain-opacity: 0.35;
+  --grain-url: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='320' height='320'><filter id='n'><feTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='2' stitchTiles='stitch'/><feColorMatrix values='0 0 0 0 0.12 0 0 0 0 0.08 0 0 0 0 0.05 0 0 0 0.28 0'/></filter><rect width='100%' height='100%' filter='url(%23n)'/></svg>");
+
+  color-scheme: light;
+}
+
+/* ── Night Edition ───────────────────────────────────────────────────── */
+[data-theme="dark"] {
+  --paper:      #14100B;
+  --paper-2:    #1E1812;
+  --paper-3:    #2A231B;
+  --ink:        #E8DEC8;
+  --ink-2:      #D3C7AE;
+  --ink-soft:   #B0A086;
+  --ink-muted:  #7A6E5B;
+  --amber:      #E1753D;
+  --amber-deep: #B85623;
+  --blue:       #7AA0D1;
+  --sage:       #9EB98C;
+  --rust:       #D05429;
+
+  --fiber-strong: rgba(232, 222, 200, 0.028);
+  --fiber-weak:   rgba(232, 222, 200, 0.012);
+
+  --grain-blend:   screen;
+  --grain-opacity: 0.18;
+  --grain-url: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='320' height='320'><filter id='n'><feTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='2' stitchTiles='stitch'/><feColorMatrix values='0 0 0 0 0.92 0 0 0 0 0.86 0 0 0 0 0.74 0 0 0 0.22 0'/></filter><rect width='100%' height='100%' filter='url(%23n)'/></svg>");
+
+  color-scheme: dark;
+}
+
+/* ── Tailwind token bridge (inline → resolves at runtime) ─────────────── */
+@theme inline {
+  --color-paper:      var(--paper);
+  --color-paper-2:    var(--paper-2);
+  --color-paper-3:    var(--paper-3);
+  --color-ink:        var(--ink);
+  --color-ink-2:      var(--ink-2);
+  --color-ink-soft:   var(--ink-soft);
+  --color-ink-muted:  var(--ink-muted);
+  --color-amber:      var(--amber);
+  --color-amber-deep: var(--amber-deep);
+  --color-blue:       var(--blue);
+  --color-sage:       var(--sage);
+  --color-rust:       var(--rust);
+
+  --font-display: "Fraunces", ui-serif, Georgia, serif;
+  --font-sans:    "Instrument Sans", ui-sans-serif, system-ui, sans-serif;
+  --font-mono:    "JetBrains Mono", ui-monospace, "SFMono-Regular", monospace;
+}
+
+@layer base {
+  html {
+    background: var(--paper);
+  }
+  body {
+    margin: 0;
+    font-family: var(--font-sans);
+    font-size: 15px;
+    line-height: 1.55;
+    background: var(--paper);
+    color: var(--ink);
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-rendering: optimizeLegibility;
+  }
+  #root { min-height: 100vh; }
+  h1, h2, h3, h4 {
+    font-family: var(--font-display);
+    font-optical-sizing: auto;
+    font-weight: 400;
+    letter-spacing: -0.01em;
+  }
+  ::selection {
+    background: var(--amber);
+    color: var(--paper);
+  }
+  input, textarea, button {
+    font: inherit;
+    color: inherit;
+  }
+}
+
+/* ── Paper grain overlay ─────────────────────────────────────────────── */
+.grain { position: relative; }
+.grain::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  z-index: 100;
+  background-image: var(--grain-url);
+  mix-blend-mode: var(--grain-blend);
+  opacity: var(--grain-opacity);
+}
+
+/* ── Subtle paper fibre texture on cards ─────────────────────────────── */
+.fiber {
+  background-image:
+    linear-gradient(0deg, transparent 95%, var(--fiber-strong) 100%),
+    repeating-linear-gradient(90deg, var(--fiber-weak) 0 1px, transparent 1px 3px);
+}
+
+/* ── Rising reveal ───────────────────────────────────────────────────── */
+@keyframes rise {
+  from { opacity: 0; transform: translateY(14px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+.rise { animation: rise 700ms cubic-bezier(0.2, 0.7, 0.2, 1) both; }
+
+/* ── Draw-in rule ────────────────────────────────────────────────────── */
+@keyframes draw-rule {
+  from { transform: scaleX(0); }
+  to   { transform: scaleX(1); }
+}
+.draw-rule {
+  animation: draw-rule 9s cubic-bezier(0.4, 0, 0.2, 1) forwards;
+  transform-origin: left center;
+}
+
+/* ── Blink cursor ────────────────────────────────────────────────────── */
+@keyframes blink {
+  0%, 50%   { opacity: 1; }
+  51%, 100% { opacity: 0; }
+}
+.blink { animation: blink 900ms steps(1, end) infinite; }
+
+/* ── Fraunces display treatment ──────────────────────────────────────── */
+.display-xl {
+  font-family: var(--font-display);
+  font-variation-settings: "opsz" 144, "SOFT" 30;
+  font-weight: 350;
+  letter-spacing: -0.025em;
+  line-height: 0.95;
+}
+.display-italic {
+  font-variation-settings: "opsz" 72, "SOFT" 60;
+  font-style: italic;
+  font-weight: 300;
+}
+
+/* ── Scrollbar (subtle) ──────────────────────────────────────────────── */
+::-webkit-scrollbar { width: 10px; height: 10px; }
+::-webkit-scrollbar-track { background: var(--paper); }
+::-webkit-scrollbar-thumb {
+  background: var(--ink-muted);
+  border: 3px solid var(--paper);
+}
+::-webkit-scrollbar-thumb:hover { background: var(--ink-soft); }
+
+/* ── Animated brand mark — hero logo ornament ────────────────────────
+ * 4-second loop:
+ *   0%–75%  (3s)  → the amber disc sweeps one full orbit inside the ring
+ *   75%–100% (1s) → it rests at the starting position
+ * ease-in-out easing gives the rotation a gentle accelerate/decelerate
+ * curve so entry and exit to the pause feel smooth rather than abrupt.
+ * ──────────────────────────────────────────────────────────────────── */
+@keyframes brand-orbit-rotate {
+  0%   { transform: rotate(0deg);   }
+  75%  { transform: rotate(360deg); }
+  100% { transform: rotate(360deg); }
+}
+
+.animated-brand-mark .brand-mark-orbit {
+  transform-origin: 13.5px 12px;
+  transform-box: view-box;
+  animation: brand-orbit-rotate 4s ease-in-out infinite;
+  will-change: transform;
+}
+
+/* ── Theme switch: circular ink-wipe via View Transitions ────────────── */
+::view-transition-old(root),
+::view-transition-new(root) {
+  animation: none;
+  mix-blend-mode: normal;
+}
+::view-transition-old(root) { z-index: 1; }
+::view-transition-new(root) { z-index: 10; }
+
+@media (prefers-reduced-motion: reduce) {
+  ::view-transition-old(root),
+  ::view-transition-new(root) { animation: none !important; }
+  .rise, .draw-rule, .blink { animation: none !important; }
+  .animated-brand-mark .brand-mark-orbit { animation: none !important; }
+}

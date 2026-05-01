@@ -1,0 +1,32 @@
+{
+  "platform_multiplier": {
+    "LinkedIn": 1.0,
+    "X": 1.0,
+    "Instagram": 0.5,
+    "TikTok": 1.0,
+    "Facebook": 1.0,
+    "YouTube": 1.0,
+    "TestPlatform": 1.02
+  },
+  "format_multiplier": {
+    "static image": 1.0,
+    "carousel": 0.96,
+    "short-form video": 1.0,
+    "long-form video": 1.0,
+    "long-form text": 0.96,
+    "infographic": 1.0,
+    "live stream": 1.0
+  },
+  "cta_multiplier": {
+    "conversion": 0.94,
+    "awareness": 0.97,
+    "lead-generation": 0.94,
+    "retention": 1.0,
+    "traffic": 1.0,
+    "engagement": 1.0
+  },
+  "time_synergy_multiplier": {
+    "Instagram|weekday_evening": 1.02
+  },
+  "version": 14
+}
