@@ -1,6 +1,6 @@
 import { useCallback, useEffect, useRef, useState } from 'react'
 
-const API_URL = import.meta.env.VITE_API_URL || 'http://localhost:8000'
+const API_URL = import.meta.env.VITE_API_URL || 'https://content-agent-backend-kh8o.onrender.com'
 
 const TONES = ['professional', 'witty', 'authoritative', 'inspirational', 'casual']
 
